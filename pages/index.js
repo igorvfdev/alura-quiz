@@ -30,9 +30,11 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Widget>
+          <Widget.Content>
             <h1>Titulo Principal</h1>
 
             <p>Loren ipsum dolor sit amedf...</p>
+          </Widget.Content>
         </Widget>
         <Footer />
       </QuizContainer>
