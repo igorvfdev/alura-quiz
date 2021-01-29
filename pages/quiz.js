@@ -19,7 +19,7 @@ export default function QuizDaGaleraPage() {
               Pergunta
               1
               de
-              {` ${db.questions.lenght}`}
+              {` ${db.questions.length}`}
           </h3>
         </Widget.Header>
         <img
