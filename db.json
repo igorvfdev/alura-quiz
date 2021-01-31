@@ -1,28 +1,65 @@
 {
-    "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://miro.medium.com/max/1000/0*ql6umH87XAQQQjuR.png",
+    "title": "Quiz da Imersão React",
+    "description": "Teste os seus conhecimentos sobre o que rolou na Imersão.",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://media.giphy.com/media/jIahBfSaeTd3G/giphy.gif",
+        "title": "Quem foi o autor da piada sobre os links no código em referência a Zelda?",
+        "description": "Referências a parte!",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto",
+          "Thiago Ventura"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://media.giphy.com/media/XQZ7fPt1MaXrW/giphy.gif",
+        "title": "Quem fez referência a gancho no uso de Hooks, mesmo que sem querer?",
+        "description": "E uma garrafa de Rum",
+        "answer": 1,
+        "alternatives": [
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto",
+          "Barba Negra"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/fR7SSFIKCKhlQRtMPw/giphy.gif",
+        "title": "Qual dos instrutores é formado em História?",
+        "description": "Um passado que foi alterado no futuro!",
+        "answer": 1,
+        "alternatives": [
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto",
+          "Professora Ruth"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/l4pMattUYTTM7qpIk/giphy.gif",
+        "title": "Qual dos instrutores se considera mais generalista?",
+        "description": "General - Generalista, sacou? kkk",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/Uto9yWTyXWGxp0mHwT/giphy.gif",
+        "title": "Qual a cor do cabelo da instrutora Juliana Amoasei?",
+        "description": "Essa é fácil",
+        "answer": 2,
+        "alternatives": [
+          "Azul",
+          "Laranja",
+          "Roxo",
+          "Ela é careca!"
         ]
       }
     ],
@@ -31,12 +68,12 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#637bfe",
-        "secondary": "#2a3eb1",
+        "primary": "#2c387e",
+        "secondary": "#3f51b5",
         "mainBg": "#000000",
         "contrastText": "#FFFFFF",
-        "wrong": "#FF5722",
-        "success": "#00a152"
+        "wrong": "#b2102f",
+        "success": "#76ff03"
       },
       "borderRadius": "4px"
     }

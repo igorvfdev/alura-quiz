@@ -26,7 +26,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Titulo Principal</h1>
+            <h1>Quiz da Imersão React</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function(e){
@@ -49,9 +49,9 @@ export default function Home() {
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>Titulo Principal</h1>
+            <h1>Imersão React - Next.js Alura</h1>
 
-            <p>Loren ipsum dolor sit amedf...</p>
+            <p>Teste os seus conhecimentos sobre o que rolou na Imersão.</p>
           </Widget.Content>
         </Widget>
         <Footer />
