@@ -52,9 +52,6 @@ function LoadingWidget() {
       <Widget.Header>
         Carregando...
       </Widget.Header>
-
-      <Widget.Content>
-      </Widget.Content>
     </Widget>
   );
 }
