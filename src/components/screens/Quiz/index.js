@@ -1,13 +1,17 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
-import Widget from '../src/components/Widget';
-import db from '../db.json';
-import GitHubCorner from '../src/components/GitHubCorner';
-import AlternativesForm from '../src/components/AlternativesForm'
+import QuizLogo from '../../QuizLogo';
+import QuizBackground from '../../QuizBackground';
+import QuizContainer from '../../QuizContainer';
+import Button from '../../Button';
+import Widget from '../../Widget';
+import GitHubCorner from '../../GitHubCorner';
+import AlternativesForm from '../../AlternativesForm';
+import BackLinkArrow from '../../BackLinkArrow';
+import loadingAnimation from './animation/loading.json';
 
 function ResultWidget({ results }) {
   return (
@@ -18,21 +22,22 @@ function ResultWidget({ results }) {
 
       <Widget.Content>
         <p>
-          Você acertou 
+          Você acertou
           {' '}
-          {results.filter((x) => x). length}
+          {results.filter((x) => x).length}
           {' '}
           perguntas
         </p>
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}`}>
-              #{index + 1}
-              {' '} 
-              Resultado: 
+              #
+              {index + 1}
+              {' '}
+              Resultado:
               {result === true
-               ? ' Acertou' 
-               : ' Errou'}
+                ? ' Acertou'
+                : ' Errou'}
             </li>
           ))}
         </ul>
@@ -49,7 +54,6 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
       </Widget.Content>
     </Widget>
   );
@@ -71,8 +75,9 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>
-          {`Pergunta ${questionIndex + 1} de ${db.questions.length}`}
+          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
       </Widget.Header>
       <img
@@ -94,15 +99,15 @@ function QuestionWidget({
 
         <AlternativesForm
           onSubmit={(e) => {
-          e.preventDefault();
-          setIsQuestionSubmited(true);
-          setTimeout(() => {
-            addResult(isCorrect);
-            onSubmit();
-            setIsQuestionSubmited(false);
-            setSelectedAlternative(undefined);
-          }, 2 * 1000);
-        }}
+            e.preventDefault();
+            setIsQuestionSubmited(true);
+            setTimeout(() => {
+              addResult(isCorrect);
+              onSubmit();
+              setIsQuestionSubmited(false);
+              setSelectedAlternative(undefined);
+            }, 2 * 1000);
+          }}
         >
 
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -115,7 +120,7 @@ function QuestionWidget({
                 key={alternativeId}
                 htmlFor={alternativeId}
                 data-selected={isSelected}
-                data-status={isQuestionSubmited && alternativeStatus} 
+                data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
                   style={{ display: 'none' }}
@@ -147,13 +152,14 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const totalQuestions = externalQuestions.length;
+  const bg = externalBg;
 
   function addResult(result) {
     setResults([
@@ -187,7 +193,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
       <QuizContainer>
         <QuizLogo />
 
@@ -204,7 +210,7 @@ export default function QuizPage() {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
-      <GitHubCorner />
+      <GitHubCorner projectUrl="https://github.com/igorvfdev/quiz-geral" />
     </QuizBackground>
   );
 }

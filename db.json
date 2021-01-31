@@ -61,10 +61,47 @@
           "Roxo",
           "Ela é careca!"
         ]
+      },
+      {
+        "image": "https://media.giphy.com/media/Uto9yWTyXWGxp0mHwT/giphy.gif",
+        "title": "Em qual aula o Paulo Silveira finalmente penteou o cabelo?",
+        "description": "Domou a fera",
+        "answer": 4,
+        "alternatives": [
+          "Aula 1",
+          "Aula 2",
+          "Aula 3",
+          "Aula 4",
+          "Aula 5"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/3o7aDddXu78FkXmLao/giphy.gif",
+        "title": "Quem é o fiscal do zoom nessa imersão?",
+        "description": "o Zoom mágico que nos ajudou a enxergar",
+        "answer": 1,
+        "alternatives": [
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/vsyKKf1t22nmw/giphy.gif",
+        "title": "De quem foi a frase?",
+        "description": "-Os erros não são pokemons, não precisamos pegar todos!-",
+        "answer": 1,
+        "alternatives": [
+          "Paulo Silveira",
+          "Juliana Amoasei",
+          "Mario Souto"
+        ]
       }
     ],
     "external": [
-      ""
+      "https://aluraquiz-base.alura-challenges.vercel.app/",
+      "https://aluraquiz-css.omariosouto.vercel.app/",
+      "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
     ],
     "theme": {
       "colors": {
